@@ -16,7 +16,7 @@ RUN rm -rf /var/www/index.html
 
 COPY . .
 
-COPY apache2/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY apache2/http.conf /etc/apache2/sites-available/000-default.conf
 
 COPY --from=node_builder /app/public/build ./public/build
 

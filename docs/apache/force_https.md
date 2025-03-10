@@ -21,8 +21,8 @@ This version of the Docker Compose configuration serves the Laravel application 
 3. Place valid SSL certificates in the `ssl` folder:
 
     ```bash
-    cp /path/to/your/certificate.crt ssl/
-    cp /path/to/your/private.key ssl/
+    cp /path/to/your/ssl.pem ssl/
+    cp /path/to/your/ssl.key ssl/
     ```
 
 4. Create an `.env` file based on the pre-configured `.env.docker` file and adjust the environment variables as needed:

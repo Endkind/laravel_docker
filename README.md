@@ -2,7 +2,7 @@
 
 This repository contains a Docker Compose configuration to run a Laravel application with PostgreSQL, Redis, Apache, Scheduler, and Queue.
 
-## Prerequisites
+## Requirements
 
 - Docker
 - Docker Compose

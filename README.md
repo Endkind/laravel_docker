@@ -45,6 +45,25 @@ If you do not use the Scheduler and Queue in Laravel, you can remove these servi
       # ...existing code...
     ```
 
+## Environment Variables
+
+The following environment variables can be set in the `.env` file:
+
+- `MIGRATE`: Controls the database migration behavior. Possible values are:
+  - `true`: Run migrations on each start.
+  - `false`: Skip migrations.
+  - `once`: Run migrations only if they haven't been run before (default).
+  - `datetime`: Run migrations if the current time is before the specified `MIGRATE_DATETIME`.
+
+### Example with `datetime`
+
+To set the `MIGRATE` variable to `datetime` and specify a `MIGRATE_DATETIME`:
+
+```env
+MIGRATE=datetime
+MIGRATE_DATETIME=2025-12-31T14:48:59
+```
+
 ## Commands
 
 - To run a command in the `web` container:

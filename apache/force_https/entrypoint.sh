@@ -39,4 +39,15 @@ else
     echo "Invalid MIGRATE value, skipping migrations..."
 fi
 
+if [ -z "$APP_KEY" ]; then
+    echo "APP_KEY is not set, reading from .env file..."
+    if [ -f ".env" ]; then
+        APP_KEY=$(grep -oP '^APP_KEY=\K.*' .env)
+        export APP_KEY
+        echo "APP_KEY set to value from .env file."
+    else
+        echo ".env file not found, APP_KEY not set."
+    fi
+fi
+
 exec "$@"

@@ -1,4 +1,4 @@
-FROM node:23 AS node_builder
+FROM node:24 AS node_builder
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN npm install \
 	&& npm run build
 
 
-FROM php:8.4-apache as runtime
+FROM php:8.4-apache AS runtime
 
 WORKDIR /var/www
 

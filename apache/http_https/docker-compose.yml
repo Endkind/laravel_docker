@@ -54,7 +54,8 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_DATABASE}
     volumes:
-      - pg_data:/var/lib/postgresql/data
+      # - pg_data:/var/lib/postgresql/data # for PostgreSQL versions below 18
+      - pg_data:/var/lib/postgresql # for PostgreSQL 18+
 
   redis:
     image: redis:latest
